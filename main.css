@@ -1,0 +1,124 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #3d4267;
+    margin: 0;
+    transition: background-color 0.5s;
+}
+
+
+.header-design{
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.header-design img{
+    width: 38px;
+    height: 40px;
+}
+
+.charisma-items{
+    margin-top: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    min-height: 500px;
+    justify-content: space-evenly;
+}
+
+.charisma-items div{
+
+}
+
+.charisma-items button{
+    position: relative;
+    width: 220px;
+    height: 220px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 19px;
+    box-shadow: 0 2px 5px black;
+    background-color: #fff7f3;
+    border: none;
+    margin: 20px;
+    transition: font-size 0.2s, border 0.1s, box-shadow 0.2s;
+}
+
+.charisma-items button:hover{
+    border: 5px solid #bdb7b4;
+    font-size: 22px;
+    box-shadow: 2px 4px 5px black;
+}
+
+.charisma-items button:active{
+    border: 5px solid #62605d;
+    font-size: 20px;
+
+}
+
+button span{
+    color: #62605d;
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    margin: auto;
+    line-height: 28px;
+    border-radius: 5px;
+    border: solid #bdbdbd;
+    border-width: 2px 4px 4px 2px;
+    transition: background-color 0.2s, font-size 0.2s, border-color 0.1s;
+}
+
+button span.clicked{
+    background-color: #dedede;
+    font-size: 16px;
+    border-width: 2px 2px 2px 2px;
+    border-color: #adadad;
+}
+
+span#info{
+    color: white;
+    display: flex;
+    font-size: 15px;
+    width: 300px;
+    height: 15px;
+    margin-right: 0;
+    text-align: center;
+}
+
+.bottom-menu{
+    margin: 10px 50px 0 50px;
+    display: flex;
+    height: 30px;
+    justify-content: space-between;
+}
+
+.color-buttons button{
+    width: 25px;
+    height: 25px;
+    border-radius: 9px;
+    border-color: white;
+}
+
+.color-buttons button:hover{
+    width: 26px;
+}
+
+.teal{
+    background-color: #2f3e2d;
+}
+
+.dark{
+    background-color: #212121;
+}
+
+.lavendar{
+    background-color: #3d4267
+}
