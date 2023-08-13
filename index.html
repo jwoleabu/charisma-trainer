@@ -46,10 +46,14 @@
         <button class="teal" title="deepwoken" onclick="colorChange(this)"></button>
         <button class="dark" title="dark" onclick="colorChange(this)" ></button>
         <button class="lavendar" title="lavendar" onclick="colorChange(this)"></button>
-
+        <button  id="muteButton" class="mute" onclick="mute(this)"></button>
     </div>
 
 </div>
+
+<audio id="sound">
+    <source src="copyclick.mp3" type="audio/mp3">
+</audio>
 <script src="script.js"></script>
 <script defer src="/_vercel/insights/script.js"></script>
 </body>

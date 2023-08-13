@@ -122,3 +122,10 @@ span#info{
 .lavendar{
     background-color: #3d4267
 }
+
+.mute{
+    position: relative;
+    background-image: url("images/volumeon.png");
+    background-position: center;
+    background-size: 20px;
+}

@@ -3,8 +3,9 @@ const words = ['Welcome to Charisma trainer v2', 'If you need any help dm pythe.
 const randomIndex = Math.floor(Math.random() * words.length)
 let charismaItems = charismaList.querySelectorAll("button");
 let charismaInfo = document.getElementById('info');
+let savedAudio = true;
 
-getColor();
+
 function addNumbers() {
     let buttonNumber = 0;
     for (let i = 0; i < charismaItems.length; i++) {
@@ -31,21 +32,40 @@ function copyClipboard(buttonNumber) {
     buttonClone = buttonClone.innerHTML
     try {
         navigator.clipboard.writeText(buttonClone);
+        if(savedAudio){
+            document.getElementById('sound').play();
+        }
         console.log('Content copied to clipboard');
     } catch (err) {
         console.error('Failed to copy: ', err);
     }
 }
 
-function getColor() {
-    const savedData = localStorage.getItem("savedColor");
-    if (savedData){
+function getData() {
+    savedAudio = localStorage.getItem("sound") !== "false";
+    let savedColor = localStorage.getItem("savedColor");
+    console.log(`the audio was saved as ${savedAudio}`)
+
+    if (savedColor){
 
         setTimeout(function() {
-        document.body.style.backgroundColor = savedData;
+        document.body.style.backgroundColor = savedColor;
         }, 500);
         console.log('CORRECT COLOR');
     }
+
+        if (savedAudio){
+
+            document.getElementById('muteButton').style.backgroundImage = 'url("images/volumeon.png")';
+            console.log('image updated vol on')
+        }
+        else if(!savedAudio){
+            document.getElementById('muteButton').style.backgroundImage = 'url("images/volumeoff.png")';
+            console.log('image updated vol off')
+        }
+
+    console.log('sound play set')
+
 
 }
 
@@ -56,9 +76,26 @@ function colorChange(element) {
         saveData();
     }, 550);
 }
+
+function mute(element) {
+    if (savedAudio){
+        savedAudio = false;
+        element.style.backgroundImage = 'url("images/volumeoff.png")';
+        saveData()
+    }
+    else{
+        savedAudio = true;
+        element.style.backgroundImage = 'url("images/volumeon.png")';
+        saveData()
+    }
+
+}
+
 function saveData() {
     console.log('data saved')
-    localStorage.setItem("savedColor", getComputedStyle(document.body).backgroundColor)
+    localStorage.setItem("savedColor", getComputedStyle(document.body).backgroundColor);
+    localStorage.setItem("sound", savedAudio);
+    console.log(`saved sound playing as ${typeof localStorage.getItem('sound')}`)
     console.log(`saved color: ${localStorage.getItem('savedColor')}`)
 }
 
@@ -76,5 +113,5 @@ document.addEventListener("DOMContentLoaded", function() {
             copyClipboard(e.key);
         }
     })
-
+    getData();
 })
