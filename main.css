@@ -36,7 +36,7 @@ body{
     /*justify-content: space-evenly;*/
 }
 
-@media screen and (max-width: 968px ){
+@media screen and (max-width: 1050px ){
     .charisma-items{
         grid-template-rows: 1fr 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr;
@@ -63,13 +63,6 @@ body{
     transition: font-size 0.2s, border 0.1s, box-shadow 0.2s;
 }
 
-@media screen and (max-width: 500px ){
-    .charisma-items button{
-        width: 130px;
-        height: 200px;
-        font-size: 14px;
-    }
-}
 
 .charisma-items button:hover{
     border: 5px solid #bdb7b4;
@@ -81,6 +74,39 @@ body{
     border: 5px solid #62605d;
     font-size: 20px;
 
+}
+
+
+@media screen and (max-width: 500px ){
+    .charisma-items button{
+        width: 130px;
+        height: 200px;
+        font-size: 14px;
+    }
+
+    .charisma-items button:hover{
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 968px ) {
+    .charisma-items button {
+        width: 220px;
+        height: 220px;
+        font-size: 19px;
+    }
+}
+
+@media screen and (min-width: 1400px ) {
+    .charisma-items button {
+        width: 300px;
+        height: 300px;
+        font-size: 20px;
+    }
+
+    .charisma-items button:hover{
+        font-size: 23px;
+    }
 }
 
 button span{
@@ -119,7 +145,7 @@ span#info{
 
 .bottom-menu{
     margin: 10px 50px 0 50px;
-    display: none; //flex
+    display: flex;
     height: 30px;
     justify-content: space-between;
 }
