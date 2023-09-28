@@ -1,6 +1,6 @@
 const charismaList = document.getElementById("list");
-const words = ['Welcome to Charisma trainer v2', 'If you need any help dm pythe. on discord', 'click 1-8 to select words'];
-const randomIndex = Math.floor(Math.random() * words.length)
+// const words = ['Welcome to Charisma trainer v2', 'If you need any help dm pythe. on discord', 'click 1-8 to select words'];
+// const randomIndex = Math.floor(Math.random() * words.length)
 let charismaItems = charismaList.querySelectorAll("button");
 let charismaInfo = document.getElementById('info');
 let savedAudio = true;
@@ -101,7 +101,7 @@ function saveData() {
 
 document.addEventListener("DOMContentLoaded", function() {
 
-    charismaInfo.innerHTML = words[randomIndex]
+    // charismaInfo.innerHTML = words[randomIndex]
 
     document.body.addEventListener("keydown", function (e){
         let validKeys = ['1', '2', '3', '4', '5', '6', '7', '8'];
