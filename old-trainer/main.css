@@ -174,7 +174,7 @@ span#info{
 
 .mute{
     position: relative;
-    background-image: url("images/volumeon.png");
+    background-image: url("volumeon.png");
     background-position: center;
     background-size: 20px;
 }

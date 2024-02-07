@@ -1,60 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Charisma Trainer</title>
-    <link rel="stylesheet" href="main.css">
-    <link rel="icon" href="images/charismalogo.webp">
-    <meta property="description" content="deepwoken charisma trainer" />
-    <meta name="description" content="Deepwoken Charisma Trainer, A website that makes training charisma easy with simple number presses or clicks on all the dialogue options in Deepwoken.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="Deepwoken Charisma Trainer" />
-    <meta property="og:description" content="Charisma trainer for Deepwoken with updated inputs." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://static.wikia.nocookie.net/project-deepwoken/images/9/9b/HiveSymbol.png/revision/latest?cb=20221125212445" />
-    <meta property="og:url" content="https://charisma-trainer.vercel.app/" />
-</head>
-<body>
-<div class="header-design">
-    <img src="images/deepwokenlogo.webp" alt="Deepwoken logo">
-</div>
-<hr>
-
-<div class="charisma-items" id="list">
-
-    <button>So, how's work?</button>
-
-    <button>Wow, this breeze is great, right?</button>
-
-    <button>Some weather we're having, huh?</button>
-
-    <button>So, what's keeping you busy these days?</button>
-
-    <button>Hey hivekin, can I bug you for a moment?</button>
-
-    <button>Me-wow, is that the latest Felinor fashion?</button>
-
-    <button>Sometimes I have really deep thoughts about life and stuff.</button>
-
-    <button> You ever been to a Canor restaurant? The food's pretty howlright. </button>
-</div>
-
-<div class="bottom-menu">
-<span id="info"><a href="https://ko-fi.com/pythe"><button><img src="images/heart.svg">Support Me</button></a></span>
-
-    <div class="color-buttons">
-        <button class="teal" title="deepwoken" onclick="colorChange(this)"></button>
-        <button class="dark" title="dark" onclick="colorChange(this)" ></button>
-        <button class="lavendar" title="lavendar" onclick="colorChange(this)"></button>
-        <button  id="muteButton" class="mute" onclick="mute(this)"></button>
-    </div>
-
-</div>
-
-<audio id="sound">
-    <source src="copyclick.mp3" type="audio/mp3">
-</audio>
-<script src="script.js"></script>
-<script defer src="/_vercel/insights/script.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/charismaLogo.webp" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React + TS</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
