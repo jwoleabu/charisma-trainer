@@ -1,11 +1,11 @@
 import './App.css'
-import BlitzButton from "./components/BlitzButton.tsx";
+import VideoRecorder from "./components/VideoRecorder.tsx";
 
 function App() {
 
   return (
       <div>
-        <BlitzButton/>
+        <VideoRecorder/>
       </div>
   )
 }
