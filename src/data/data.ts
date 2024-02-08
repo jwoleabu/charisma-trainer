@@ -12,12 +12,20 @@ export default [
     cid: 4,
   },
   {
+    word: 'bug',
+    cid: 4,
+  },
+  {
+    word: 'moment',
+    cid: 4,
+  },
+  {
     word: 'weather',
     cid: 2,
   },
   {
     word: 'work',
-    cid: 1,
+    cid: 0,
   },
   {
     word: 'breeze',

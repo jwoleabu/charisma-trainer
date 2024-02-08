@@ -55,6 +55,7 @@ function VideoRecorder() {
         }
     }
 
+
     const detectLine = ((text: string)=>{
         let charismaWord = data.find(({word}) =>{
             return text.toLowerCase().includes(word.toLowerCase())
@@ -63,7 +64,7 @@ function VideoRecorder() {
             console.log(`Charisma line ${charismaWord.cid} detected from word ${charismaWord.word}`)
             let currentLine = lines[charismaWord.cid]
             if (clipboard != currentLine){
-                navigator.clipboard.writeText(currentLine).then(()=>{
+                 navigator.clipboard.writeText(currentLine).then(()=>{
                     if (ding.current) ding.current.play()
                     clipboard = currentLine
                     console.log("Successful clipboard write")
@@ -73,7 +74,9 @@ function VideoRecorder() {
             }
 
         }
-        else console.log("No cline detected")
+        else {console.log("No cline detected")
+            console.log(text)
+        }
     })
 
 
@@ -97,7 +100,7 @@ function VideoRecorder() {
             console.log(`${video.videoWidth}width , ${video.videoHeight}`)
             const {data: {text}} = await scheduler.addJob('recognize', canvas)
             detectLine(text)
-            console.log(text)
+            // console.log(text)
             console.log("ocr phase")
         }
     }
